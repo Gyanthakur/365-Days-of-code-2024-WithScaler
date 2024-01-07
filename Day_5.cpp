@@ -34,6 +34,8 @@ Example Output
 
 
 */
+#include <bits/stdc++.h>
+using namespace std;
 
 struct TreeNode
 {
@@ -47,8 +49,6 @@ struct TreeNode
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-#include <bits/stdc++.h>
-using namespace std;
 
 vector<TreeNode *> solve(int s, int e)
 
