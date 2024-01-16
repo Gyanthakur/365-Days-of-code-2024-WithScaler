@@ -3,6 +3,7 @@
 
 #include<bits/stdc++.h>
 using namespace std;
+#include<string>
 bool compareNum(string a, string b) {
     return a + b > b + a;
 }
