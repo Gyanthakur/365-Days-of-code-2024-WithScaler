@@ -1,6 +1,7 @@
 /* https://www.interviewbit.com/problems/excel-column-number/ */
 
 #include<bits/stdc++.h>
+#include<string>
 using namespace std;
 int titleToNumber(string a) {
     int n = a.size();
