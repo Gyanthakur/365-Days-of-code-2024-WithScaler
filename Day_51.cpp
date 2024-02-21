@@ -25,7 +25,7 @@ void recur(TreeNode *root, int sum, vector<int> &curr, vector<vector<int>> &ans)
      curr.pop_back();
  }
  
-vector<vector<int> > Solution::pathSum(TreeNode* A, int B) {
+vector<vector<int> > pathSum(TreeNode* A, int B) {
    
     vector<vector<int>> ans;
     vector<int> curr;
