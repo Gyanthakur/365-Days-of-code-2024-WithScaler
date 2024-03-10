@@ -10,53 +10,52 @@ struct ListNode
     ListNode *right, *next;
     ListNode(int x) : val(x), left(NULL), right(NULL) {}
 };
-ListNode *reverseBetween(ListNode *A, int B, int C)
+ListNode *reverseBetween(ListNode *head, int B, int C)
 {
-    if (A == NULL || A->next == NULL)
-        return A;
+    if (head == NULL || head->next == NULL)
+        return head;
 
-    ListNode *m = A;
-    ListNode *n = A;
-    ListNode *x = A;
-    int b = 1;
-    while (b < B)
+    ListNode *StartEle = head;
+    ListNode *lastEle = head;
+    ListNode *prevEle = head;
+    int left = 1;
+    while (left < B)
     {
-        x = m;
-        m = m->next;
-        b += 1;
+        prevEle = StartEle;
+        StartEle = StartEle->next;
+        left++;
     }
 
-    int c = 1;
+    int right = 1;
 
-    while (c <= C)
+    while (right <= C)
     {
-        n = n->next;
-        c += 1;
+        lastEle = lastEle->next;
+        right++;
     }
-
-    ListNode *p = NULL;
-    ListNode *q = m;
-    ListNode *r;
+    ListNode *prev = NULL;
+    ListNode *curr = StartEle;
+    ListNode *forward = NULL;
 
     int count = 1;
 
     while (count <= C - B + 1)
     {
-        r = q->next;
-        q->next = p;
-        p = q;
-        q = r;
+        forward = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = forward;
         count += 1;
     }
 
-    if (x == m)
+    if (prevEle == StartEle)
     {
-        A = p;
+        head = prev;
     }
     else
     {
-        x->next = p;
+        prevEle->next = prev;
     }
-    m->next = q;
-    return A;
+    StartEle->next = curr;
+    return head;
 }
