@@ -15,7 +15,6 @@ int evalRPN(vector<string> &A)
         if (A[i] != "+" && A[i] != "-" && A[i] != "*" && A[i] != "/")
         {
 
-            // We are given A as string but stack has int value
 
             st.push(stoi(A[i])); // convert string from A to int in stack
         }
