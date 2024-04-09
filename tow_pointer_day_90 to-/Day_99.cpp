@@ -1,4 +1,4 @@
-https://www.interviewbit.com/problems/diffk/
+//  https://www.interviewbit.com/problems/diffk/
 
 #include <bits/stdc++.h>
 using namespace std;
