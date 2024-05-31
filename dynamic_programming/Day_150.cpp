@@ -2,7 +2,7 @@
 // https : // www.interviewbit.com/problems/word-break/
 
 #include <bits/stdc++.h>
-        using namespace std;
+using namespace std;
 
 bool contains(string A, vector<string> &B)
 {
